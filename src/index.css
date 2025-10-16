@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme{
+    --color-cf-dark-red: #782024;
+    --color-cf-gray: #606060;
+    --color-cf-dark-gray: #383737
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
