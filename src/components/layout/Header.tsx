@@ -2,7 +2,7 @@
 const Header = () => {
   return (
     <>
-      <header className="bg-cf-dark-red w-full fixed">
+      <header className="bg-cf-dark-red w-full fixed z-999">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <img className="my-4 h-16"
             src="https://codingfactory.aueb.gr/sites/all/themes/cf_theme/logo.png"
