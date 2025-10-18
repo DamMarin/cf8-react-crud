@@ -1,3 +1,4 @@
+import {AuthButton} from "@/components/AuthButton.tsx";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
             alt="CF Logo"
           />
           <nav className="flex gap-4 text-white font-medium">
-            <a href="#">Home</a>
+            <AuthButton/>
           </nav>
         </div>
       </header>
