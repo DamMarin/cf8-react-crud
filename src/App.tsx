@@ -4,6 +4,7 @@ import HomePage from "@/components/pages/HomePage.tsx";
 import ProductsPage from "@/components/pages/ProductsPage.tsx";
 import ProductPage from "@/components/pages/ProductPage.tsx";
 import {Toaster} from "sonner";
+import LoginPage from "@/components/pages/LoginPage.tsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
           <Route index element={<HomePage />}/>
+          <Route path="login" element={<LoginPage />}/>
           <Route path="products">
             <Route index element={<ProductsPage/>}/>
             <Route path=":productId" element={<ProductPage/>}/>

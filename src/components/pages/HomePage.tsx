@@ -5,7 +5,7 @@ const HomePage = () => {
   const links = [
     {path: "/", label: "Home Page"},
     {path: "/products", label: "Products"},
-    {path: "/products/12", label: "Product (ID:12)"},
+    {path: "/login", label: "Login"},
   ];
 
   useEffect(()=> {
