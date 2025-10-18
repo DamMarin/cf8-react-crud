@@ -1,9 +1,13 @@
+import type {LoginFields} from "@/schemas/login.ts";
+
 const API_URL = import.meta.env.VITE_API_URL;
 
-export async function login(
-  username: string,
-  password: string){
+export type LoginResponse = {
+  access_token: string;
+  token_type: string;
+}
 
+export async function login({username, password}: LoginFields): Promise<LoginResponse> {
   const form = new URLSearchParams();
   form.append("username", username);
   form.append("password", password);

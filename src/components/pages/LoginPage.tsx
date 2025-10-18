@@ -4,12 +4,13 @@ import {Button} from "@/components/ui/button.tsx";
 import {type LoginFields, loginSchema} from "@/schemas/login.ts";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
-import {login} from "@/services/api.login.ts";
 import {toast} from "sonner";
 import {useNavigate} from "react-router";
+import {useAuth} from "@/hooks/useAuth.ts";
 
 export default function LoginPage(){
- const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { loginUser } = useAuth();
 
   const {
     register,
@@ -21,9 +22,7 @@ export default function LoginPage(){
 
   const onSubmit = async (data: LoginFields) => {
     try {
-
-      await login(data.username, data.password); //
-
+      await loginUser(data);
       toast.success("Login successful");
       navigate("/products");
     } catch (err) {
@@ -63,6 +62,5 @@ return(
       </Button>
     </form>
   </>
-)
-
+  )
 }
